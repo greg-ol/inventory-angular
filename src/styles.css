@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+.card {
+    background: #ffffff;
+    border: 1px solid #d9d9d4;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+body {
+    max-width: 50%;
+    margin: auto;
+    background-color: #d7dbd1;
+    padding-right: 1rem;
+}
+
+label {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+input, textarea {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: .5rem;
+    margin: .2rem;
+}
+
+button {
+    color: #02021d;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: rgb(205, 201, 226);
+}
+
+button.disabled {
+    opacity: .5;
+}
+
+textarea {
+    width: 90%;
+    height: 15rem;
+}
+
+input.invalid, textarea.invalid {
+    border-color: #b3261d;
+}
+
+.error {
+    color: #b3261d;
+    margin: .6rem 0 0;
+}
+
+.muted {
+    color: #6b6b64
+}
+
+.scroll {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+th, td {
+    text-align: left;
+    border-bottom: 1px solid;
+}

@@ -1,0 +1,26 @@
+<section class="card">
+    <h2> Inventory as of: {{updateResult.inventoryDate}}</h2>
+    <div class="scroll">
+        <table>
+            <caption class="sr-only">Updated inventory</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Items</th>
+                    <th scope="col">Sell In</th>
+                    <th scope="col">Quality</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(item of updateResult.items; track $index; let i = $index) {
+                    <tr>
+                        <td>{{item.name}}</td>
+                        <td>{{item.sellIn}}</td>
+                        <td>{{item.quality}}</td>
+                    </tr>
+                } @empty {
+                    <tr><td colspan="3" class="muted">The inventory is empty</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

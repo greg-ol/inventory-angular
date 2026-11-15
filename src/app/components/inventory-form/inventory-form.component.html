@@ -1,0 +1,34 @@
+<form class="card" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <label for="items">Inventory</label>
+        
+        <textarea id="items" formControlName="itemsJson" spellcheck="false"
+        [class.invalid]="form.controls.itemsJson.invalid && form.controls.itemsJson.touched"></textarea>
+        @if(form.controls.itemsJson.touched && form.controls.itemsJson.errors; as errors) {
+            <p class="error" role="alert">
+                {{errors['required'] ? 'Enter your inventory.' : errors['notList'] ? 'The inventory must be a valid list' :'Print something' }}
+            </p>
+        }
+
+        <div class="row">
+            <div>
+                <label for="date">Inventory date</label>
+                <input id="date" type="date" formControlName="date">
+            </div>
+            <div>
+                <label for="days">Days to advance</label>
+                <input id="days" type="number" min="1" max="365" formControlName="days"
+                [class.invalid]="form.controls.days.invalid">
+            </div>
+            <button type="submit" [disabled]="loading">{{loading ? 'Running..' : 'Run Inventory'}}</button>
+        </div>
+
+        @if(convertError) {
+            <p class="error" role="alert">{{convertError}}</p>
+        }
+        @if(form.controls.days.invalid) {
+            <p class="error" role="alert">Days must be a whole number from 1 to 365</p>
+        }
+        @if(error) {
+            <p class="error" role="alert">{{error}}</p>
+        }
+</form>
