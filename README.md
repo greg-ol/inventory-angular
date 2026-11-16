@@ -8,7 +8,7 @@ In order to run application:
 1. Install dependencies  `npm install`
 2. Run application  `npm run start`
 
-Please not this application uses proxy setting for calling right API and setting is use when running `start`
+Please note: this application uses proxy setting for calling right API and setting is picked up when running `start`
 
 To run available tests please use:
 
