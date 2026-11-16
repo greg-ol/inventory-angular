@@ -1,30 +1,29 @@
-# InventoryAngular
+# Inventory Angular Front End
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.7.
 
-## Development server
+## Running Application
 
-To start a local server first install dependencies:
+In order to run application:
+1. Install dependencies  `npm install`
+2. Run application  `npm run start`
 
-npm install
+Please not this application uses proxy setting for calling right API and setting is use when running `start`
 
-run application:
-npm run start
+To run available tests please use:
 
-To run unit test suite:
-
-npm run test.
+`npm run test`
 
 
 Please note:
-- Application accepts list of inventory items in form where every entry is in new line:
+- Application accepts list of inventory items in form of Strings, where every entry is placed in new line:
   Aged Brie 2 20
   Normal Item -2 1  etc...
 - or JSON with inventory items:
-  [
+`  [
   {
     "name": "Normal Item",
     "sellIn": 3,
     "quality": 20
   }
-  ]
+  ]`
