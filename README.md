@@ -14,3 +14,17 @@ npm run start
 To run unit test suite:
 
 npm run test.
+
+
+Please note:
+- Application accepts list of inventory items in form where every entry is in new line:
+  Aged Brie 2 20
+  Normal Item -2 1  etc...
+- or JSON with inventory items:
+  [
+  {
+    "name": "Normal Item",
+    "sellIn": 3,
+    "quality": 20
+  }
+  ]
